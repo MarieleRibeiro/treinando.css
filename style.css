@@ -1,0 +1,111 @@
+/* Declarando variaveis para nao precisar lembrar de cabeça os valores */
+:root {
+  --black: #16181f;
+  --white: #ffffff;
+  --gray100: #9298ad;
+  --gray200: #71768c;
+  --gray300: #636879;
+  --gray400: #3d404c;
+  --gray500: #22242c;
+  --gray600: #1b1d25;
+  --pink-light: #ff5477;
+  --pink: #c74063;
+  --pink-dark: #b02342;
+}
+
+* {
+  /* selecionar todos os elementos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif; /* alterando a fonte de todos os elementos */
+  outline: none;
+}
+
+#container {
+  position: relative;
+  min-height: 100vh; /* altura minima de 100% da minha tela */
+  width: 100%;
+  background: var(--gray500); /* como utilizar uma variavel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  width: 749px;
+  height: 614px;
+  background: var(--gray600);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 57px;
+  position: relative;
+}
+#content h3 {
+  color: var(--gray100);
+}
+
+#content p {
+  margin-top: 24px;
+  color: var(--gray300);
+  max-width: 391px;
+  text-align: center; /*alinhar o texto no centro*/
+}
+
+/* pode ser feito com flex-box e com grid */
+#content main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 60px 0;
+}
+
+#content button {
+  border: none;
+  background: var(--black);
+  color: var(--gray200);
+  min-width: 120px;
+  padding: 19px 31px;
+  border-radius: 5px;
+  cursor: pointer; /* maozinha*/
+}
+
+#content footer button#save {
+  background: var(--pink);
+  margin-left: 20px;
+  color: var(--white);
+}
+
+#content footer button#skip {
+  border: 1px solid var(--gray200);
+}
+
+#close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: var(--gray200);
+  background: var(--black);
+  padding: 16px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button#clicked {
+  box-shadow: 0px 0px 0px 8px rgba(255, 84, 119, 0.18);
+  border: 1px solid var(--pink-dark);
+  color: var(--white);
+}
+button#active {
+  border: 1px solid var(--pink-dark);
+  color: var(--white);
+}
